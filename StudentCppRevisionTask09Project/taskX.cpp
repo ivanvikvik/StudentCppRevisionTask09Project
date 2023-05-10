@@ -31,5 +31,5 @@
 */
 
 bool taskX(long number) {
-	return 0;
+	return false;
 }

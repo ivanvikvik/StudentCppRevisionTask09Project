@@ -84,6 +84,7 @@ void testingTask04() {
 		&& task04(2) == "1 2"
 		&& task04(5) == "1 2 4"
 		&& task04(10) == "1 2 4 8"
+		&& task04(16) == "1 2 4 8 16"
 		&& task04(20) == "1 2 4 8 16"
 		&& task04(100) == "1 2 4 8 16 32 64"
 		&& task04(500) == "1 2 4 8 16 32 64 128 256"
@@ -98,13 +99,14 @@ void testingTask05() {
 		&& task05(9) == 1
 		&& task05(0) == 1
 		&& task05(-15) == 2
+		&& task05(-123456789) == 9
 		&& task05(1234567890) == 10
 		&& task05(900) == 3
 		&& task05(11111) == 5
 		&& task05(999999) == 6
 		&& task05(1000000) == 7;
 
-	cout << "Task 05: Count of Number Digits" << (result ? RIGHT : WRONG) << endl;
+	cout << "Task 05 [Count of Number Digits]" << (result ? RIGHT : WRONG) << endl;
 }
 
 void testingTask06() {
@@ -128,51 +130,57 @@ void testingTask06() {
 		&& task06(1000000) == 1
 		&& task06(-1000000) == 1;
 
-	cout << "Task 06: Sum of Number Digits" << (result ? RIGHT : WRONG) << endl;
+	cout << "Task 06 [Sum of Number Digits]" << (result ? RIGHT : WRONG) << endl;
 }
 
 void testingTask07() {
-	bool result = task07(123456789) == 9
-		&& task07(13254) == 5
+	bool result = task07(12345) == 1
+		&& task07(54321) == 1
 		&& task07(0) == 0
-		&& task07(-15) == 5
-		&& task07(15) == 5
+		&& task07(-12345) == 1
+		&& task07(-54321) == 1
+		&& task07(1) == 1
+		&& task07(-1) == 1
+		&& task07(9) == 9
 		&& task07(-9) == 9
-		&& task07(-123456) == 6
-		&& task07(1234567890) == 9
-		&& task07(-1234567890) == 9
-		&& task07(-123456789) == 9
-		&& task07(900) == 9
-		&& task07(-900) == 9
+		&& task07(1234567890) == 0
+		&& task07(-1234567890) == 0
+		&& task07(999999999) == 9
+		&& task07(-999999999) == 9
 		&& task07(11111) == 1
 		&& task07(-11111) == 1
-		&& task07(999999) == 9
-		&& task07(-999999) == 9
-		&& task07(1000000) == 1
-		&& task07(-1000000) == 1;
+		&& task07(101) == 0
+		&& task07(-101) == 0
+		&& task07(100) == 0
+		&& task07(-100) == 0;
 
-	cout << "Task 07: Number Digit Max" << (result ? RIGHT : WRONG) << endl;
+	cout << "Task 07 [Min Number Digit]" << (result ? RIGHT : WRONG) << endl;
 }
 
 void testingTaskX() {
-	bool result = taskX(123456789) == 9
-		&& taskX(13254) == 5
-		&& taskX(0) == 0
-		&& taskX(-15) == 5
-		&& taskX(15) == 5
-		&& taskX(-9) == 9
-		&& taskX(-123456) == 6
-		&& taskX(1234567890) == 9
-		&& taskX(-1234567890) == 9
-		&& taskX(-123456789) == 9
-		&& taskX(900) == 9
-		&& taskX(-900) == 9
-		&& taskX(11111) == 1
-		&& taskX(-11111) == 1
-		&& taskX(999999) == 9
-		&& taskX(-999999) == 9
-		&& taskX(1000000) == 1
-		&& taskX(-1000000) == 1;
+	bool result = taskX(12345)
+		&& taskX(54321)
+		&& taskX(0)
+		&& !taskX(11111)
+		&& !taskX(121)
+		&& taskX(-12345)
+		&& taskX(-54321)
+		&& !taskX(11345)
+		&& !taskX(54311)
+		&& !taskX(12145)
+		&& !taskX(54121)
+		&& !taskX(-11345)
+		&& !taskX(-54311)
+		&& taskX(1234567890)
+		&& taskX(-1234567890)
+		&& !taskX(900)
+		&& !taskX(-900)
+		&& !taskX(11111)
+		&& !taskX(-11111)
+		&& !taskX(999999)
+		&& !taskX(-999999)
+		&& !taskX(1000000)
+		&& !taskX(-1000000);
 
-	cout << "Task X [Number Digit Max] " << (result ? RIGHT : WRONG) << endl;
+	cout << "Task X [Unique Number Digits] " << (result ? RIGHT : WRONG) << endl;
 }

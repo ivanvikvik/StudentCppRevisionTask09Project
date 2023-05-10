@@ -23,6 +23,6 @@
 *	[output 4]: 6
 */
 
-int task06(long number) {
+int task06(long number) {	
 	return 0;
 }
