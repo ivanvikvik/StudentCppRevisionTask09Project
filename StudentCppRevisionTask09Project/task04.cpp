@@ -24,6 +24,4 @@
 *	[output 4]: 0
 */
 
-string task04(int number) {
-	return "?";
-}
+//task04

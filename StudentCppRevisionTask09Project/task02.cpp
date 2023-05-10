@@ -27,6 +27,4 @@
 *	[output 4]: false
 */
 
-bool task02(int number) {
-	return false;
-}
+//task02

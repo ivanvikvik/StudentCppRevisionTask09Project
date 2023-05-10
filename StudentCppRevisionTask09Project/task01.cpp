@@ -24,6 +24,4 @@
 *	[output 4]: 0
 */
 
-int task01(int number) {
-	return 0;
-}
+//task01

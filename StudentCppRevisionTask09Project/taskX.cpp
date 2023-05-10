@@ -30,6 +30,4 @@
 *	[output 6]: true
 */
 
-bool taskX(long number) {
-	return false;
-}
+//taskX

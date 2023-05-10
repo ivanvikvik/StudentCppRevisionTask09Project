@@ -21,8 +21,6 @@
 *
 *	[ input 4]: -15
 *	[output 4]: 2
-*/
+*
 
-int task05(long number) {
-	return 0;
-}
+//task05

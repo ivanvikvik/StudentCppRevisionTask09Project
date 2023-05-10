@@ -27,6 +27,4 @@
 *	[output 5]: 1
 */
 
-int task07(long number) {
-	return 0;
-}
+//task07
