@@ -1,4 +1,4 @@
-﻿#include "tasks.h"(
+#include "tasks.h"
 
 /*	Task 04. Все целые степени двойк (All Integer Powers of Two)
 *
