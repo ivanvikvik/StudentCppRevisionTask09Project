@@ -35,6 +35,7 @@ void testingTask02() {
 		&& task02(1)
 		&& !task02(0)
 		&& !task02(30)
+		&& !task02(28)
 		&& !task02(-4)
 		&& !task02(-64)
 		&& !task02(-512)
