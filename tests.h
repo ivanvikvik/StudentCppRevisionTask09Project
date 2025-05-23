@@ -1,8 +1,21 @@
-#pragma once
+﻿#pragma once
 #include "tasks.h"
 
-#define RIGHT " - completed successfully. Well DONE!!!"
-#define WRONG " - was not running successfully. ERROR!"
+void print_test(string test_name, bool result) {
+	string msg = test_name + " ";
+
+	if (result) {
+		msg +=  " - completed successfully.\033[1;32m Well DONE!!!";
+	}
+	else {
+		msg += " - was not running successfully.\033[1;31m ERROR!";
+	}
+
+	cout << msg << endl;
+
+	cout << "\033[0m";
+}
+
 
 void testingTask01() {
 	bool result = !task01(2023)
@@ -43,7 +56,7 @@ void testingTask01() {
 		&& !task01(-2200)
 		&& !task01(-2300);
 
-	cout << "Task 01 [The Leap Year]" << (result ? RIGHT : WRONG) << endl;
+	print_test("Task 01 [The Leap Year]", result);
 }
 
 void testingTask02() {
@@ -71,7 +84,7 @@ void testingTask02() {
 		&& task02(7, 5, -7) == 5
 		&& task02(5, 7, -7) == 5;
 
-	cout << "Task 02 [The Average Number]" << (result ? RIGHT : WRONG) << endl;
+	print_test("Task 02 [The Average Number]", result);
 }
 
 void testingTask03() {
@@ -103,7 +116,7 @@ void testingTask03() {
 		&& task03(10, 2023) == 31
 		&& task03(12, 2023) == 31;
 
-	cout << "Task 03 [Amount of Days]" << (result ? RIGHT : WRONG) << endl;
+	print_test("Task 03 [Amount of Days]", result);
 }
 
 void testingTask04() {
@@ -141,7 +154,7 @@ void testingTask04() {
 		&& task04(2, 3, 7, 8) == "No arithmetic progression."
 		&& task04(8, 7, 3, 2) == "No arithmetic progression.";
 
-	cout << "Task 04 [Arithmetic Progression]" << (result ? RIGHT : WRONG) << endl;
+	print_test("Task 04 [Arithmetic Progression]", result);
 }
 
 
@@ -247,5 +260,5 @@ void testingTaskX() {
 		&& taskX(3, 11, 5, 4, -7, 9) == "Error."
 		&& taskX(3, 11, 5, 4, 7, -9) == "Error.";
 
-	cout << "Task X  [Boxes]" << (result ? RIGHT : WRONG) << endl;
+	print_test("Task X  [Boxes]", result);
 }
